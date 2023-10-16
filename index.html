@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Chlorophyll calculator</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="logo">Chlorophyll calculator</h1>
+        <ul>
+            <li><a href="#" class="btnnav">Home</a></li>
+            <li><a href="#" class="btnnav">How it work</a></li>
+            <li><a href="#" class="btnnav">Us</a></li>
+        </ul>
+    </div>
+    <div class="showingbody">
+        <input type="file" id="fileinput" accept="image/*" oninput="updateInputFromSlider()">
+        <label class="lable1" for="fileinput">Upload Image</label>
+        <hr>
+        <div class="contaner">
+            <div class="imgContaner">
+                <div class="window">
+                    <label for="imageSrc">Image</label>
+                <img id="imageSrc" src="Lib/OIP.jpg" alt="No Image" width="380px">
+                </div>
+                <div class="window">
+                    <label for="imgcancas">Mask</label>
+                <canvas id="imgcancas"></canvas>
+                </div>
+                <div class="window">
+                    <label for="cropedimg">Masked Image</label>
+                <canvas id="cropedimg"></canvas>
+                </div>
+            </div>
+            <div class="maskInput">
+                <table>
+                    <tr>
+                        <th>Color</th>
+                        <th colspan="2">Lower</th>
+                        <th colspan="2">Upper</th>
+                    </tr>
+                    <tr>
+                        <th>Red Color</th>
+                        <th><label for="Rvallow"><input type="range" id="Rvallow" value="0" min="0" max="255" oninput="updateInputFromSlider()"></label></th>
+                        <th><input type="text" id="RLvallow" size="3" value="0" oninput="updateSliderFromInput()"/></th>
+                        <th><label for="Rval"><input type="range" id="Rval" value="255" min="0" max="255" oninput="updateInputFromSlider()"></label></th>
+                        <th><input type="text" id="RLval" size="3" value="255" oninput="updateSliderFromInput()"/></th>
+                        
+                    </tr>
+                    <tr>
+                        <th>Green Color</th>
+                        <th><label><input type="range" id="Gvallow" value="0" min="0" max="255" oninput="updateInputFromSlider()"></label></th>
+                        <th><input type="text" id="GLvallow" size="3" value="0" oninput="updateSliderFromInput()"/></th>
+                        <th><label><input type="range" id="Gval" value="255" min="0" max="255" oninput="updateInputFromSlider()"></label></th>
+                        <th><input type="text" id="GLval" size="3" value="255" oninput="updateSliderFromInput()"/></th>
+                        
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th>Blue Color</th>
+                        <th><label><input type="range" id="Bvallow" value="0" min="0" max="255" oninput="updateInputFromSlider()"></label></th>
+                        <th><input type="text" id="BLvallow" size="3" value="0" oninput="updateSliderFromInput()"/></th>
+                        <th><label><input type="range" id="Bval" value="255" min="0" max="255" oninput="updateInputFromSlider()"></label></th>
+                        <th><input type="text" id="BLval" size="3" value="255" oninput="updateSliderFromInput()"/></th>
+                       
+                    </tr>
+                    
+                    <tr>
+                        <th>Invert</th>
+                        <th><input type="checkbox" id="invert" oninput="updateInputFromSlider()"></th>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <!-- <canvas id="cropedimg0"></canvas>
+            <canvas id="cropedimg1"></canvas>
+            <canvas id="cropedimg2"></canvas>
+            <canvas id="cropedimg3"></canvas> -->
+            <table>
+                <tr>
+                    <th>Avarage Red</th>
+                    <th>Avarage Green</th>
+                    <th>Avarage Blue</th>
+                </tr>
+                <tr>
+                    <th><span id="A_Red">NaN</span></th>
+                    <th><span id="A_Green">NaN</span></th>
+                    <th><span id="A_Blue">NaN</span></th>
+    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <script src="Lib/opencv.js"></script>
+    <script src="Script/main.js"></script>
+</body>
+</html>

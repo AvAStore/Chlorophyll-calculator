@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+    color: black;
+    /* scroll-behavior: smooth;
+    transition: all 0.5s ease; */
+    
+}
+body{
+    position: absolute;
+    width: 100%;
+    background-color:rgba(210, 219, 206, 0.26);
+}
+ul{
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.288);
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.logo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-left: 1em;
+    color: #245f12;
+    font-weight:800;
+    text-shadow: 5px 2px 8px rgba(0, 0, 0, 0.349);
+}
+.navbar ul{
+    display: flex;
+    margin-right: 12em;
+}
+.navbar li{
+    margin: 0 2.5rem;
+}
+.navbar li:hover{
+    text-decoration: underline;
+    font-weight:bolder;
+}
+.navbar li:nth-child(1){
+    text-decoration:underline;
+    
+}
+.btnnav{
+    text-decoration: none;
+}
+
+.showingbody{
+    position: absolute;
+    /* height: 50rem; */
+    width: 80%;
+    background-color:#ffffff;
+    margin: 5rem 10% 2% 10%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 180px rgba(0, 0, 0, 0.349);
+}
+input[type="file"]{
+    display: none;
+}
+.lable1{
+    background-color: #245f12;
+    display: block;
+    position: relative;
+    color: #ffffff;
+    font-weight: 800;
+    text-align: center;
+    width: 30%;
+    padding: 18px 0;
+    margin: 1em 35% 1em 35%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.lable1:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+img{
+    width: 100%;
+    max-height: 60rem;
+}
+.contaner{
+    margin: 1em;
+    
+}
+.imgContaner{
+    align-self: center;
+    display: flex;
+    margin: 1rem;
+    
+    
+}
+.imgContaner label{
+    display: block;
+    text-align: center;
+   
+
+}
+.window{
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+    height: fit-content;
+    
+}
+table{
+    width: 60%;
+}
+/* th:nth-child(2){
+    width: 10%;
+} */
+input[type="range"]{
+    width: 100%;
+}
+#imgcancas{
+    width: 100%;
+    max-height: 80%;
+}
+#cropedimg{
+    width: 100%;
+    max-height: 80%;
+}
+/* #cropedimg0{
+    width: 30%;
+    background-color: aqua;
+}
+#cropedimg1{
+    width: 30%;
+    background-color: aqua;
+}
+#cropedimg2{
+    width: 30%;
+    background-color: aqua;
+} */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
